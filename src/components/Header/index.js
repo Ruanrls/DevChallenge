@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import * as S from './styled';
-import env from '../../config/github'
+import env from '../../config/github';
 
 export default function Header() {
     const location = useLocation();
@@ -15,8 +15,7 @@ export default function Header() {
     }, [location]);
 
     const handleLogin = () => {
-        window.location.href =
-            `https://github.com/login/oauth/authorize?client_id=${env.CLIENT_ID}`;
+        window.location.href = `https://github.com/login/oauth/authorize?client_id=${env.client_id}`;
     };
 
     return (
