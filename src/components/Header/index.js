@@ -13,6 +13,11 @@ export default function Header() {
         setClicked(false);
     }, [location]);
 
+    const handleLogin = () => {
+        window.location.href =
+            'https://github.com/login/oauth/authorize?client_id=5023286bf1948ac05f6b';
+    };
+
     return (
         <S.Header>
             <S.Title>
@@ -50,13 +55,13 @@ export default function Header() {
                         </S.StyledLink>
                     </li>
                     <li>
-                        <S.ButtonLink activeClassName="is-active" to="/login">
+                        <a activeClassName="is-active" onClick={handleLogin}>
                             Entrar
                             <FontAwesomeIcon
                                 icon={faGithub}
                                 style={{ marginLeft: '10px' }}
                             />
-                        </S.ButtonLink>
+                        </a>
                     </li>
                 </ul>
             </S.Menu>
